@@ -13,6 +13,7 @@ const Canvas = props => {
 
     useEffect(() => {
         const canvas = canvasRef.current
+        // canvas is what it sounds like, it's a canvas you can draw on
         const context = canvas.getContext('2d')
         let frameCount = 0
         let animationFrameId
@@ -27,7 +28,7 @@ const Canvas = props => {
         return() => {
             window.cancelAnimationFrame(animationFrameId)
         }
-        }, [draw])
+    }, [draw])
     return <canvas ref={canvasRef} {...props} />
 }
 
